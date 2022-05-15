@@ -22,12 +22,7 @@ $email = $_POST['email'];
 if (isset($_POST['dni'])==true && ($_POST['email'])==false) {
     echo 'DNI  : ' . $dni;
 }
-if(isset($_POST['dni'])==false && ($_POST['email'])==true){
-
-    echo 'DNI obligatorio' ;    
-
-}
-if(isset($_POST['dni'])==false && ($_POST['email'])==false){
+if(isset($_POST['dni'])==false){
 
     echo 'DNI obligatorio' ;    
 
