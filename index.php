@@ -15,23 +15,22 @@
 //Pushear los cambios al repositorio remoto.
 //Para entregar la evaluación copiar el link del repositorio.
 
-$dni = $_POST['dni'];
-$email = $_POST['email'];
-
-
-if (isset($_POST['dni'])==true && ($_POST['email'])==false) {
-    echo 'DNI  : ' . $dni;
+if (isset($_POST['dni']) == false) {
+    echo 'DNI OBLIGATORIO';
 }
-if(isset($_POST['dni'])==false){
 
-    echo 'DNI obligatorio' ;    
+if (isset($_POST['dni']) == true && isset($_POST['email']) == false) {
+    echo 'DNI  : ' . $_POST['dni'];
+}
 
+
+if (isset($_POST['dni']) == true && ($_POST['email']) == true) {
+
+    echo 'DNI  : ' . $_POST['dni'];
+    echo '<br>';
+    echo 'email : ' . $_POST['email'];
 }
-if(isset($_POST['dni'])==true && ($_POST['email'])==true){
-    echo 'DNI  : ' . $dni;
-    echo '<hr>';
-    echo 'email : ' . $email;
-}
+
 
 
 
